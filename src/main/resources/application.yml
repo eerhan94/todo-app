@@ -1,0 +1,10 @@
+server:
+  port: 9300
+app:
+  couchbase:
+    connection: 127.0.0.1
+    username: admin
+    password: password
+    bucket:
+      user: user
+      todo: todo
