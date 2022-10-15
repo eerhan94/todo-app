@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "43a8fd43-af11-42c2-84d6-086117527ba9",
+		"_postman_id": "03d97c17-faf6-41db-9933-9ff71dd78292",
 		"name": "todo",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -13,7 +13,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXMxIiwiZXhwIjoxNjY1NjIwMDA1LCJpYXQiOjE2NjU2MDIwMDV9.qMpe1aVMr0rsYtgm04IjZiNppoct8hPVfMf3NCC6cus",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTY2NTg3OTgxMiwiaWF0IjoxNjY1ODYxODEyfQ.jjQZlKCe8JdUdl4UdngPpY8N6hw8pzCZ5NkdFp9Wn8YRBv9aHcdFS3e6e6rUHxR3cq5DoTPOiGvnjfzVK_v9Vw",
 							"type": "string"
 						}
 					]
@@ -28,7 +28,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"tes1\",\r\n    \"description\": \"desc\",\r\n    \"status\": true,\r\n    \"username\": \"eek2\"\r\n}",
+					"raw": "{\r\n    \"name\": \"test todo 2\",\r\n    \"description\": \"desc 2\",\r\n    \"status\": true,\r\n    \"username\": \"testuser\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -53,7 +53,14 @@
 			"name": "get all",
 			"request": {
 				"auth": {
-					"type": "noauth"
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTY2NTg3OTgxMiwiaWF0IjoxNjY1ODYxODEyfQ.jjQZlKCe8JdUdl4UdngPpY8N6hw8pzCZ5NkdFp9Wn8YRBv9aHcdFS3e6e6rUHxR3cq5DoTPOiGvnjfzVK_v9Vw",
+							"type": "string"
+						}
+					]
 				},
 				"method": "GET",
 				"header": [
@@ -64,7 +71,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:9300/todo/all?username=eek2",
+					"raw": "http://localhost:9300/todo/all?username=testuser",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -77,7 +84,7 @@
 					"query": [
 						{
 							"key": "username",
-							"value": "eek2"
+							"value": "testuser"
 						}
 					]
 				}
@@ -87,6 +94,16 @@
 		{
 			"name": "get by id",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTY2NTg3OTgxMiwiaWF0IjoxNjY1ODYxODEyfQ.jjQZlKCe8JdUdl4UdngPpY8N6hw8pzCZ5NkdFp9Wn8YRBv9aHcdFS3e6e6rUHxR3cq5DoTPOiGvnjfzVK_v9Vw",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [
 					{
@@ -96,7 +113,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:9300/todo/0869f576-f658-476a-b893-f708c973fd56",
+					"raw": "http://localhost:9300/todo/1a6c0810-f5c8-430f-94a2-299e90468108",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -104,7 +121,7 @@
 					"port": "9300",
 					"path": [
 						"todo",
-						"0869f576-f658-476a-b893-f708c973fd56"
+						"1a6c0810-f5c8-430f-94a2-299e90468108"
 					]
 				}
 			},
@@ -113,10 +130,20 @@
 		{
 			"name": "delete by id",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTY2NTg3OTgxMiwiaWF0IjoxNjY1ODYxODEyfQ.jjQZlKCe8JdUdl4UdngPpY8N6hw8pzCZ5NkdFp9Wn8YRBv9aHcdFS3e6e6rUHxR3cq5DoTPOiGvnjfzVK_v9Vw",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9300/todo/0869f576-f658-476a-b893-f708c973fd56",
+					"raw": "http://localhost:9300/todo/55068286-a2d7-46d2-b530-52614da286cb",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -124,7 +151,7 @@
 					"port": "9300",
 					"path": [
 						"todo",
-						"0869f576-f658-476a-b893-f708c973fd56"
+						"55068286-a2d7-46d2-b530-52614da286cb"
 					]
 				}
 			},
@@ -133,11 +160,21 @@
 		{
 			"name": "update by id",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTY2NTg3OTgxMiwiaWF0IjoxNjY1ODYxODEyfQ.jjQZlKCe8JdUdl4UdngPpY8N6hw8pzCZ5NkdFp9Wn8YRBv9aHcdFS3e6e6rUHxR3cq5DoTPOiGvnjfzVK_v9Vw",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"tes1updated\",\r\n    \"description\": \"desc\",\r\n    \"status\": true,\r\n    \"username\": \"eek2\"\r\n}",
+					"raw": "{\r\n    \"name\": \"test todo 1 updated\",\r\n    \"description\": \"desc 1 updated\",\r\n    \"status\": true,\r\n    \"username\": \"testuser\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -145,7 +182,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9300/todo/1599a5d3-eb89-49f6-85f1-6c87c3a7f1bc",
+					"raw": "http://localhost:9300/todo/1a6c0810-f5c8-430f-94a2-299e90468108",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -153,7 +190,7 @@
 					"port": "9300",
 					"path": [
 						"todo",
-						"1599a5d3-eb89-49f6-85f1-6c87c3a7f1bc"
+						"1a6c0810-f5c8-430f-94a2-299e90468108"
 					]
 				}
 			},
@@ -166,7 +203,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"tes1\",\r\n    \"password\": \"eek2\"\r\n}",
+					"raw": "{\r\n    \"username\": \"testuser\",\r\n    \"password\": \"testpassword\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -194,7 +231,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"tes1\",\r\n    \"email\": \"desc\",\r\n    \"password\": \"eek2\"\r\n}",
+					"raw": "{\r\n    \"username\": \"testuser\",\r\n    \"password\": \"testpassword\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
