@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "43a8fd43-af11-42c2-84d6-086117527ba9",
+		"name": "todo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXMxIiwiZXhwIjoxNjY1NjIwMDA1LCJpYXQiOjE2NjU2MDIwMDV9.qMpe1aVMr0rsYtgm04IjZiNppoct8hPVfMf3NCC6cus",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "user-name",
+						"value": "eek",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"tes1\",\r\n    \"description\": \"desc\",\r\n    \"status\": true,\r\n    \"username\": \"eek2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9300/todo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9300",
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-name",
+						"value": "eek",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9300/todo/all?username=eek2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9300",
+					"path": [
+						"todo",
+						"all"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "eek2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-name",
+						"value": "eek",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9300/todo/0869f576-f658-476a-b893-f708c973fd56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9300",
+					"path": [
+						"todo",
+						"0869f576-f658-476a-b893-f708c973fd56"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9300/todo/0869f576-f658-476a-b893-f708c973fd56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9300",
+					"path": [
+						"todo",
+						"0869f576-f658-476a-b893-f708c973fd56"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"tes1updated\",\r\n    \"description\": \"desc\",\r\n    \"status\": true,\r\n    \"username\": \"eek2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9300/todo/1599a5d3-eb89-49f6-85f1-6c87c3a7f1bc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9300",
+					"path": [
+						"todo",
+						"1599a5d3-eb89-49f6-85f1-6c87c3a7f1bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"tes1\",\r\n    \"password\": \"eek2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9300/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9300",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"tes1\",\r\n    \"email\": \"desc\",\r\n    \"password\": \"eek2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9300/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9300",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
