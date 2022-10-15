@@ -26,10 +26,22 @@ swagger-ui.png
 unit-test.png
 
 # Create User Api
-
+curl --location --request POST 'http://localhost:9300/user' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=1FE6B9B8F5A6F3B68E2991104596E3E0' \
+--data-raw '{
+    "username": "testuser",
+    "password": "testpassword"
+}'
 
 # Authentication Token Url
-
+curl --location --request POST 'http://localhost:9300/login' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=1FE6B9B8F5A6F3B68E2991104596E3E0' \
+--data-raw '{
+    "username": "testuser",
+    "password": "testpassword"
+}'
 
 # Postman Collections
 postman.png
