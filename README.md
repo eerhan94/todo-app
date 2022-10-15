@@ -18,12 +18,12 @@ ReadingIsGood is an online books retail firm which operates only on the Internet
 6. Docker
 7. JUnit and Mockito
 
-# Swagger reading-is-good-api
+# Swagger todo-app-api
 http://localhost:9300/swagger-ui/index.html#/
-swagger-ui.png
+![swagger-ui](https://user-images.githubusercontent.com/10101398/196004625-89e153a7-b12b-4dd0-93af-46501b91ca5f.png)
 
 # Unit test coverage
-unit-test.png
+![unit-test](https://user-images.githubusercontent.com/10101398/196004630-11bb4d83-ef9d-4eea-a77a-b62784d84891.png)
 
 # Create User Api
 curl --location --request POST 'http://localhost:9300/user' \
@@ -44,4 +44,4 @@ curl --location --request POST 'http://localhost:9300/login' \
 }'
 
 # Postman Collections
-postman.png
+![postman](https://user-images.githubusercontent.com/10101398/196004634-15a5d22a-6381-4e51-a49c-1950a146ecd1.png)
