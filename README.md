@@ -1,6 +1,6 @@
 # TODO Application
 Project Description
-ReadingIsGood is an online books retail firm which operates only on the Internet. Main target of ReadingIsGood is to deliver books from its one centralized warehouse to their customers within the same day.
+To Do List App developed with Spring Boot
 
 # Running with docker
 1. Clone this repository
